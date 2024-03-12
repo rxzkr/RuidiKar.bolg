@@ -1,0 +1,235 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {font-family: “Microsoft YaHei”;}
+input {font-family: “Microsoft YaHei”;}
+
+.body{
+	background: url(../img/图片资源/子页背景.png) no-repeat;
+	background-size:100% auto;
+	background-attachment:scroll;
+    background-repeat: repeat-y;
+	overflow-x: hidden;/* 超出边框内容不显示 */
+	position: relative;
+}
+
+.box0{
+	width: 100%;
+	height: 260px;
+	background-image: url(../img/图片资源/头图背景.png
+	);
+	overflow: hidden;/* 超出边框内容不显示 */
+	background-repeat:no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+.back{
+	pointer-events: none;/* 无法被点击 */
+	position: absolute;
+	width: 345px;
+	height: auto;
+	right: 0px;
+	top: 5px;
+	float: right;
+	animation: back 1s 1;
+	transition: all 1s ease;
+}
+@keyframes back{
+	0%{right: -345px;}
+	100%{right: 0px;}
+}
+.i{
+	width: 30px;
+	position: relative;
+	top: 5%;
+	left: -48%;
+}
+#amend{
+	width: 40px;
+	height: 100%;
+	position: absolute;
+	left: 90%;
+	top:20%;
+	color: #bababa;
+}
+.text1{
+	position: absolute;
+	top:20%;
+	left: 100px;
+	bottom: 0;
+	font-family: xingshu;
+	color: #ffffff;
+}
+.text2{
+	font-size: 40px;
+	margin-top: 30px;
+	margin-left: 40px;
+	float: left;
+	Letter-spacing:10px;
+}
+.text3{
+	font-size: 25px;
+	margin-top: 30px;
+	margin-left: 40px;
+	margin-right: 40px;
+	float: left;
+	Letter-spacing:4px;
+}
+.text4{
+	font-size: 19px;
+	margin-top: 15px;
+	margin-left: 40px;
+	margin-right: 40px;
+	float: left;
+	text-indent:38px;
+	letter-spacing:3px;
+}
+
+.ulbox{
+	width: 100%;
+	height: 40px;
+	background-color: #9e0002;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.ul1 {
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	/* 文本水平居中 */
+	color: #ffffff;
+	font-size: 16px;
+	position: absolute;
+	/* 开启绝对定位 */
+	top:0;
+	right: 20px;
+	display: flex;/* 弹性布局 */
+	justify-content: space-between;
+	max-width: 300px;
+}
+.ul1 li {
+	width: 60px;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 40px;
+	background-color: rgba(0,0,0,0);
+}
+
+.ulbox ul li:hover{
+	color: #bababa;
+	background-color: rgba(0,0,0,0.3);
+	cursor: pointer;/* 改变鼠标样式 */
+}
+
+#ul2{
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	/* 文本水平居中 */
+	color: #ffffff;
+	font-size: 20px;
+	position: absolute;
+	/* 开启绝对定位 */
+	display: flex;/* 弹性布局 */
+	justify-content: space-between;
+	max-width: 900px;
+}
+#ul2 li {
+	width: 120px;
+	height: 80px;
+	vertical-align: middle;
+	line-height: 80px;
+	background-color: rgba(0,0,0,0);
+}
+#ul2 li:hover{
+	color: #bababa;
+	background-color: rgba(0,0,0,0.3);
+	cursor: pointer;/* 改变鼠标样式 */
+}
+
+#load{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(52, 52, 52);
+}
+
+#d1{
+	z-index: 9999;
+	position: fixed;
+	top: -80px;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(52,52,52,0.80);
+	transition: all 0.5s ease;
+}
+
+#d3{
+	float: left;
+	background-image: url("../img/图片资源/子页素材/背景4.png");
+	width: 100%;
+	height: 300px;
+	position:absolute;
+}
+	#d3-1{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.d3-1img{
+		width: 60px;
+		height: 60px;
+		margin-left: 50px;
+		margin-right: 50px;
+		margin-top: 30px;
+	}
+	#d3-2{
+		width: 100%;
+		height: auo;
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+	}
+	#d3-2ul{
+		width: 100%;
+		list-style: none;
+		text-align: center;
+		/* 文本水平居中 */
+		color: #ffffff;
+		font-size: 20px;
+		position: absolute;
+		/* 开启绝对定位 */
+		display: flex;/* 弹性布局 */
+		justify-content: space-between;
+		max-width: 460px;
+	}
+	#d3-2ul li:hover{
+		cursor: pointer;/* 改变鼠标样式 */
+	}
+	.d3-2-1{
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		top: 160px;
+	}
+	.d3-2text{
+		margin-left: 10px;
+		margin-right: 10px;
+		color: aliceblue;
+		font-size: 19px;
+	}

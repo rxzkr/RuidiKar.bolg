@@ -1,76 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>瑞雪大帝的个人博客</title>
-    <link rel="stylesheet" href="./css/index.css" type="text/css">
-    <script type="text/javascript" src="./js/index.js"></script>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>飞阁流丹·古建筑简介站</title>
+		<link href="./css/飞阁流丹首页.css" rel="stylesheet">
+		<link href="./css/Smiley%20Sans.css" rel="SmileySans">
+		<style>
+			@font-face {/* 引入得意黑字体 */
+				font-family:'Smiley Sans';
+				src: url('./font/得意黑字体/SmileySans-Oblique.otf');
+			}
+			@font-face {
+				font-family:'yunfeng';
+				src: url('./font/云峰静龙行书/云峰静龙行书.ttf');
+			}
+			
+		</style>
+		<script src="js/jquery-1.11.3/jquery.min.js"></script>
+		
+	</head>
+	<body id="background">
+		<div class="box1">
+			<img onclick="window.location.href='index.html'" src="img/UI/black/logo.svg" alt="LOGO" class="i">
+			<ul class="ul1">
+				<li onclick="window.location.href='子页面/yan.html'"><img style="width: 50px;height: 50px;" src="img/UI/black/檐.svg" alt="檐"></li>
+				<li onclick="window.location.href='子页面/qiang.html'"><img style="width: 50px;height: 50px;" src="img/UI/black/墙.svg" alt="墙"></li>
+				<li onclick="window.location.href='子页面/zhu.html'"><img style="width: 50px;height: 50px;" src="img/UI/black/柱.svg" alt="柱"></li>
+				<li onclick="window.location.href='子页面/chuang.html'"><img style="width: 50px;height: 50px;" src="img/UI/black/窗.svg" alt="窗"></li>
+				<li onclick="window.location.href='子页面/men.html'"><img style="width: 50px;height: 50px;" src="img/UI/black/门.svg" alt="门"></li>
+				<li onclick="window.location.href='子页面/lan.html'"><img style="width: 50px;height: 50px;" src="img/UI/black/栏.svg" alt="栏"></li>
+				<li>
+					关于我们
+					<div class="box6">
+						<ul>
+							<li onclick="window.location.href='子页面/about.html'">开发者说</li>
+							<li onclick="window.location.href='子页面/shouquan.html'">信息授权</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+				<img src="img/图片资源/前景.png" class="back" alt="前景">
+			<div class="box3">
+				<div class="box2"><!-- 此导航栏跳转链接皆使用window.location.href函数进行跳转 -->
+					<div class="box5 GPS1" onclick="window.location.href='子页面/yan.html'">
+							<img src="img/UI/檐.svg" alt="檐" class="svg"/>
+							<span style="color: #F0F8FF; text-align: center;display: block;">檐</span>
+						</div>
+						<div class="box5 GPS2" onclick="window.location.href='子页面/qiang.html'">
+							<img src="img/UI/墙.svg" alt="墙" class="svg"/>
+							<span style="color: #F0F8FF; text-align: center;display: block;">墙</span>
+						</div>
+						<div class="box5 GPS3" onclick="window.location.href='子页面/zhu.html'">
+							<img src="img/UI/柱.svg" alt="柱" class="svg"/>
+							<span style="color: #F0F8FF; text-align: center;display: block;">柱</span>
+						</div>
+						<div class="box5 GPS4" onclick="window.location.href='子页面/chuang.html'">
+							<img src="img/UI/窗.svg" alt="窗" class="svg"/>
+							<span style="color: #F0F8FF; text-align: center;display: block;">窗</span>
+						</div>
+						<div class="box5 GPS5" onclick="window.location.href='子页面/men.html'">
+							<img src="img/UI/门.svg" alt="门" class="svg"/>
+							<span style="color: #F0F8FF; text-align: center;display: block;">门</span>
+						</div>
+						<div class="box5 GPS6" onclick="window.location.href='子页面/lan.html'">
+							<img src="img/UI/栏.svg" alt="栏" class="svg"/>
+							<span style="color: #F0F8FF; text-align: center;display: block;">栏</span>
+						</div>
+				</div>
+				
+				<img style="height: 100%;width: 130%" id="juanzhou" src="img/图片资源/卷轴.png" alt="卷轴">
+				<img style="height: 100%;width: 130%" id="juanzhou2" src="img/图片资源/青卷右.png" alt="卷轴">
+			</div>
+		
 
-    <style>
-        ul{
-            width: 400px;
-            height: 50px;
-            list-style: none;
-            margin: 30px auto;
-            position: relative;
-        }
-        ul li{
-            float: left;
-            height: 50px;
-            width: 100px;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            line-height: 50px;
-            /* border-radius: 25px; */
-        }
-        ul::before{
-            content: "";
-            border: 25px solid #000;
-            border-left-color: transparent;
-            position: absolute;
-            left: -50px;
-            bottom: 0px;
-        }
-        ul::after{
-            content: "";
-            border: 25px solid #000;
-            border-right-color:  transparent;
-            position: absolute;
-            right: -50px;
-            z-index: -1;
-        }
-        ul li:hover{
-            transform: scale(1.2);/* 扩大为1.2倍 */
-            background-color: darkgoldenrod;
-            margin-top: -15px;
-            z-index: 10;
-        }
-        ul li:hover::before{
-            content: "";
-            border: 8px solid transparent;
-            border-right-color: darkgoldenrod;
-            position: absolute;
-            left: -8px;
-            bottom: -8px;
-        }
-        ul li:hover::after{
-            content: "";
-            border: 8px solid transparent;
-            border-left-color: darkgoldenrod;
-            position: absolute;
-            right: -8px;
-            bottom: -8px;
-        }
-    </style>
-</head>
-<body>
-    <ul>
-        <li>首页</li>
-        <li>目录</li>
-        <li>简介</li>
-        <li>详情</li>
-    </ul>
-</body>
+<!--
+ * **************************************************************************
+ * ********************                                  ********************
+ * ********************      COPYRIGHT INFORMATION       ********************
+ * ********************                                  ********************
+ * **************************************************************************
+ *                                                                          *
+ *                                   _oo8oo_                                *
+ *                                  o8888888o                               *
+ *                                  88" . "88                               *
+ *                                  (| -_- |)                               *
+ *                                  0\  =  /0                               *
+ *                                ___/'==='\___                             *
+ *                              .' \\|     |// '.                           *
+ *                             / \\|||  :  |||// \                          *
+ *                            / _||||| -:- |||||_ \                         *
+ *                           |   | \\\  -  /// |   |                        *
+ *                           | \_|  ''\---/''  |_/ |                        *
+ *                           \  .-\__  '-'  __/-.  /                        *
+ *                         ___'. .'  /--.--\  '. .'___                      *
+ *                      ."" '<  '.___\_<|>_/___.'  >' "".                   *
+ *                     | | :  `- \`.:`\ _ /`:.`/ -`  : | |                  *
+ *                     \  \ `-.   \_ __\ /__ _/   .-` /  /                  *
+ *                 =====`-.____`.___ \_____/ ___.`____.-`=====              *
+ *                                   `=---=`                                *
+ * **************************************************************************
+ * ********************                                  ********************
+ * ********************      				             ********************
+ * ********************         佛祖保佑 永远无BUG         ********************
+ * ********************                                  ********************
+ * **************************************************************************
+-->
+
+		<script src="./js/index.js"></script>
+	</body>
 </html>

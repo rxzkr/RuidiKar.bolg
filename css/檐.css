@@ -1,0 +1,195 @@
+#d2{
+	position: absolute;
+	top: 320px;
+	width: 1600px;
+	height: auto;
+	transform-origin:top;
+}
+	#d2-1{
+		width: 1600px;
+		height: 1080px;
+		margin-bottom: 80px;
+	}
+		#d2-1-1{
+			width: 920px;
+			height: 560px;
+			float: left;
+			margin-bottom: 40px;
+		}
+			#d2-1-1-1{
+				background-image: url("../img/图片资源/子页素材/背景3.jpeg");
+				width: 460px;
+				height: 560px;
+				float: left;
+			}
+			#d2-1-1-2{
+				width: 460px;
+				height: 560px;
+				float: right;
+				overflow: hidden;
+			}
+
+		#d2-1-2{
+			background-image: url("../img/图片资源/子页素材/背景.jpg");
+			width: 640px;
+			height: 1080px;
+			float: right;
+			position: relative;
+		}
+			#d2-1-2-1{
+				position: absolute;
+				z-index: 2;
+				width: 1080px;
+			}
+			#d2-1-2-2{
+				position: absolute;
+				z-index: 1;
+				right: 0px;
+				width: 313px;
+				height: 1080px;
+				overflow: hidden;
+			}
+		#d2-1-3{
+			background-image: url("../img/图片资源/子页素材/背景3.jpeg");
+			height: 480px;
+			width: 920px;
+			float: left;
+		}
+			#d2-1-3-1{
+				width: 400px;
+				height: 480px;
+				margin-right: 40px;
+				overflow: hidden;
+				position: relative;
+				float: left;
+			}
+			#d2-1-3-1img{
+				width: 160%;
+				height: 100%;
+				position: absolute;
+				left: -170px;
+			}
+			#d2-1-3-2{
+				width: 480px;
+				height: 480px;
+				float: left;
+			}
+
+	#d2-2{
+		width: 1600px;
+		height: 720px;
+		margin-bottom: 80px;
+	}
+		#d2-2-1{
+			width: 1600px;
+			height: 80px;
+			margin-bottom: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.d2-2-1text{
+			width: 320px;
+			height: 40px;
+			vertical-align: middle;
+			margin-top: 16px;
+			background-color: rgba(0, 0, 0, 0);
+		}
+		#d2-2-2{
+			width: 1600px;
+			height: 600px;
+			background-image: url("../img/图片资源/子页素材/背景1.jpeg");
+		}
+			#d2-2-2-1{
+				width: 520px;
+				height: 600px;
+				margin-right: 40px;
+				float: left;
+				position: relative;
+				overflow: hidden;
+			}
+				#d2-2-2-1img1{
+					width: 100%;
+					height: 100%;
+					
+					
+				}
+				#d2-2-2-1img2{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					left: 0;
+					-webkit-mask-image: url("../img/图片资源/子页素材/檐/北遮罩.png");
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-size: 100% 100%;
+					-webkit-mask-position: center;
+				}
+			#d2-2-2-2{
+				width: 1040px;
+				height: 600px;
+				float: left;
+			}
+
+	#d2-3{
+		width: 1600px;
+		height: 680px;
+		margin-bottom: 80px;
+	}
+		#d2-3-1{
+			width: 1600px;
+			height: 80px;
+			margin-bottom: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#d2-3-2{
+			width: 400px;
+			height: 560px;
+			margin-right: 40px;
+			float: left;
+			overflow: hidden;
+		}
+		#d2-3-3{
+			width: 400px;
+			height: 560px;
+			background-image: url("../img/图片资源/子页素材/背景3.jpeg");
+			float: left;
+		}
+		#d2-3-4{
+			width: 700px;
+            height: 560px;
+            display: flex;
+			float: right;
+		}
+		.windows{
+			flex: 1;
+            overflow: hidden;
+            transition: 0.5s;
+            margin: 0 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border: 10px solid #fff;
+            background-color: #fff;
+		}
+		.windows>img{
+            width: 200%;
+            height: 85%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .windows>span{
+            font: 200 26px '微软雅黑';
+            text-align: center;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .windows:hover{
+            flex-basis: 40%;
+        }
+        .windows:hover>img{
+            width: 100%;
+            height: 100%;
+        }

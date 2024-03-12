@@ -1,0 +1,208 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+    position: relative;
+	overflow: hidden;
+}
+
+.i {
+	width: 110px;
+	height: 100px;
+	margin-top: 33px;
+}
+.svg{
+	margin: 40px 1px 0 1px;
+}
+#background{
+	background: url(../img/图片资源/古镇日出.png) no-repeat;
+	background-size:100% 100%;
+	background-attachment:fixed;
+}
+
+
+.back{
+	pointer-events: none;/* 无法被点击 */
+	width: auto;
+	height: 100vh;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	overflow: hidden;
+	animation: back 1s 1;
+}
+@keyframes back{
+	0%{right: -400px;}
+	100%{right: 0px;}
+}
+
+.txt1 {
+	margin-top: 15px;
+}
+
+.box1 {
+	width: 100%;
+	height: 75px;
+/*	background:linear-gradient(0deg,rgba(0,0,0,0),rgb(235 170 120)); 向0度方向从透明渐变到橙色 */
+}
+.box2{
+	pointer-events: auto;/* 恢复被点击功能 */
+	display: flex;/* 开启flex属性 */
+	display: block;
+	flex: 1 1 0px;
+	width: 676px;
+	height: 288px;
+	position: absolute;
+	top: 6%;
+	left: 100%;
+	z-index:1;
+	opacity: 1;
+	background-image: url(../img/图片资源/画布.png);
+	background-repeat: round;
+	
+	-webkit-mask-image: url(./画布.png);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 0% 100%;
+	-webkit-mask-position: center;
+	
+	transition: all 1s ease;
+}
+#juanzhou{
+	position: absolute;
+	top: 0px;
+	left: 2100%;
+	z-index:2;
+	transition: all 1s ease;
+}
+#juanzhou2{
+	position: absolute;
+	top: 0px;
+	left: 2200%;
+	z-index:2;
+	transition: all 1s ease;
+}
+.box3{
+	width: 16px;
+	height: 325px;
+	position: fixed;
+	transform-origin: 2150% 50%;
+	top: -300px;left: 882px;
+	pointer-events: none;/* 无法被点击 */
+	transform: scale(1);/*控制卷轴整体缩放*/
+	rotate: 0deg;
+	opacity: 0;
+	transition: top 1s ease,left 1s ease,opacity 1s ease,rotate 1s ease;
+}
+
+.box5{
+	width: 30px;
+	height: 150px;
+	background-image: url(../img/图片资源/复选框.png);
+	background-repeat:round;
+	font-family: 'yunfeng';/* 使用字体 */
+	
+	 -webkit-transition:transform 0.3s;/* 鼠标移开后过度 */
+	    transition:transform 0.3s;
+}
+.box2 .box5:hover{/* 复选框鼠标悬停放大效果 */
+		transform: scale(1.2);
+
+	  -webkit-transition: transform 0.3s;/* 鼠标悬停时过度 */
+	      transition:transform 0.3s;
+	  cursor: pointer;/* 改变鼠标样式 */
+}
+
+.box6{/* 目录下拉列表平铺 */
+	position: absolute;
+	opacity: 0;/* 文字透明度0 */
+	top: 23px;
+	left: 475px;
+	-webkit-transition:opacity 0.3,top 0.3s;/* 鼠标移开后过度 */
+	   transition:opacity 0.3,top 0.3s;
+}
+
+.GPS1{
+	position: absolute;
+	top: 37px;
+	left: 10%;
+}
+
+.GPS2{
+	position: absolute;
+	top: 100px;
+	left: 25%;
+}
+.GPS3{
+	position: absolute;
+	top: 37px;
+	left: 40%;
+}
+.GPS4{
+	position: absolute;
+	top: 100px;
+	left: 55%;
+}
+.GPS5{
+	position: absolute;
+	top: 37px;
+	left: 70%;
+}
+.GPS6{
+	position: absolute;
+	top: 100px;
+	left: 85%;
+}
+
+.ul1 {
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	/* 文本水平居中 */
+	color: #272727;
+	position: absolute;
+	padding-top: 10px;
+	padding-bottom: 55px;
+	top: -70px;
+	left: 100px;
+	display: flex;/* 弹性布局 */
+	justify-content: space-between;
+	max-width: 560px;
+	transition: all 0.3s;
+}
+.ul1 li {
+	font-family: "微软雅黑";/* 使用字体 */
+	/* 取消换行 */
+	margin: 0 20px 0 0;/* 以外边距控制间隔 */
+	display: flex;/* 控制文本垂直居中 */
+	align-items: center;
+}
+.box1 ul li:hover{
+	color: aliceblue;
+	cursor: pointer;/* 改变鼠标样式 */
+}
+.box1 ul li:hover .box6{/* 悬停目录处显示下拉菜单 */
+	list-style: none;
+	opacity: 1;
+	top: 45px;
+	left: 476px;
+	-webkit-transition: top 0.3s,opacity 0.3s;/* 鼠标悬停时过度 */
+	    transition:top 0.3s ,opacty 0.3s;
+	cursor: pointer;/* 改变鼠标样式 */
+}
+.box1 ul li div:hover .box6{/* 与上段作用相同,保证鼠标移至下拉菜单时,菜单不消失 */
+	display: block;
+	list-style: none;
+	position: absolute;
+	top: 140%;
+	left: 235px;
+	cursor: pointer;/* 改变鼠标样式 */
+}
+.box6 ul li{
+	line-height: 150%;
+	white-space:nowrap;
+	margin: 0;
+	color: #272727;
+}
+
