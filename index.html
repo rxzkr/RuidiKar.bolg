@@ -4,11 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>瑞雪大帝的个人博客</title>
-    二阶段测试
     <link rel="stylesheet" href="./css/index.css" type="text/css">
     <script type="text/javascript" src="./js/index.js"></script>
+
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        }
+        ul{
+            width: 400px;
+            height: 50px;
+            list-style: none;
+            margin: 30px auto;
+            position: relative;
+        }
+        ul li{
+            float: left;
+            height: 50px;
+            width: 100px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            /* border-radius: 25px; */
+        }
+        ul::before{
+            content: "";
+            border: 25px solid #000;
+            border-left-color: transparent;
+            position: absolute;
+            left: -50px;
+            bottom: 0px;
+        }
+        ul::after{
+            content: "";
+            border: 25px solid #000;
+            border-right-color:  transparent;
+            position: absolute;
+            right: -50px;
+            z-index: -1;
+        }
+        ul li:hover{
+            transform: scale(1.2);/* 扩大为1.2倍 */
+            background-color: darkgoldenrod;
+            margin-top: -15px;
+            z-index: 10;
+        }
+        ul li:hover::before{
+            content: "";
+            border: 8px solid transparent;
+            border-right-color: darkgoldenrod;
+            position: absolute;
+            left: -8px;
+            bottom: -8px;
+        }
+        ul li:hover::after{
+            content: "";
+            border: 8px solid transparent;
+            border-left-color: darkgoldenrod;
+            position: absolute;
+            right: -8px;
+            bottom: -8px;
+        }
+    </style>
 </head>
 <body>
-    修改了一般测试文本
+    <ul>
+        <li>首页</li>
+        <li>目录</li>
+        <li>简介</li>
+        <li>详情</li>
+    </ul>
 </body>
 </html>
